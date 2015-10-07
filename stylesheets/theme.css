@@ -2818,6 +2818,61 @@ blockquote {
     width: 51%;
   }
 }
+/* ---------- progress bar / thermometer / counter ------------------ */
+.pgbar-thermometer {
+  margin-top: 1.5625em;
+  margin-bottom: 1.5625em;
+  max-width: 31em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pgbar-thermometer .t_body {
+  position: relative;
+  background-color: #d0cfcd;
+  height: 30px;
+  margin: 0 -6px;
+  overflow: hidden;
+}
+.pgbar-thermometer .t_body .t_level {
+  background-color: #ff2600;
+  background: url('../images/pgbar_end.png') no-repeat #ff2600 center right;
+  height: 30px;
+  min-width: 16px;
+}
+.pgbar-thermometer .t_body:before,
+.pgbar-thermometer .t_body:after {
+  content: "";
+  width: 1.4em;
+  height: 30px;
+  position: absolute;
+  top: 0;
+}
+.pgbar-thermometer .t_body:before {
+  left: 0;
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.pgbar-thermometer .t_body:after {
+  right: 0;
+}
+.pgbar-thermometer .t_body .t_current {
+  font-family: "Verdana W01 Bold", Verdana, Arial, sans;
+  font-weight: bold;
+  font-style: normal;
+  color: #7f7f7f;
+  position: absolute;
+  right: 1em;
+  top: 0;
+  line-height: 30px;
+}
+.pgbar-thermometer .pgbar-text {
+  font-family: "Verdana W01 Bold", Verdana, Arial, sans;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  margin-top: 0.390625em;
+}
 /* ==================================================================
  * form styling
  * ================================================================== */

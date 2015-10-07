@@ -49,4 +49,33 @@ $(window).load(function(){
     }
   });
 
+  // configure progressbar = thermometer = counter
+  var $thermometerEl = $('.pgbar-thermometer');
+  var thermometerTarget = 250; // default
+  var thermometerStart = 0; // default
+  // read target value from data-target
+  var thermometerDataTarget = $thermometerEl.data('target');
+  if (typeof thermometerDataTarget !== 'undefined') {
+    var parsedTarget = parseInt(thermometerDataTarget, 10);
+    if (!isNaN(parsedTarget) && parsedTarget > 0) {
+      thermometerTarget = parsedTarget;
+    }
+  }
+  // read start value from data-start
+  var thermometerDataStart = $thermometerEl.data('start');
+  if (typeof thermometerDataStart !== 'undefined') {
+    var parsedStart = parseInt(thermometerDataStart, 10);
+    if (!isNaN(parsedStart) && parsedStart > 0) {
+      thermometerStart = parsedStart;
+    }
+  }
+  // initialize eActivistThermometer
+  $thermometerEl.eActivistThermometer({
+    token: '3104e980-8039-41ad-8be6-2df53841b2f0',
+    campaignId: $('input[name="ea.campaign.id"]').val(),
+    target: thermometerTarget,
+    initialValue: thermometerStart,
+    service: 'EaEmailAOTarget',
+    targetDataColumn: 'participatingSupporters'
+  });
 });
