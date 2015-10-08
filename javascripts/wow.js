@@ -29,6 +29,16 @@ $(window).load(function(){
   if (typeof $.fn.picker == 'function') {
     $('input[type=radio], input[type=checkbox]').picker();
   }
+  // add a class for picker label height
+  $('.picker-label').each(function(){
+    var label = $(this);
+    var handle = label.siblings('.picker-handle');
+    if (label.height() > 25){
+      label.parent().addClass('multiline');
+    } else {
+      label.parent().addClass('oneline');
+    }
+  });
 
   // move validation icon next to label
   // and the error message below the label
@@ -77,5 +87,21 @@ $(window).load(function(){
     initialValue: thermometerStart,
     service: 'EaEmailAOTarget',
     targetDataColumn: 'participatingSupporters'
+  });
+
+  // cookie bar
+  if (typeof localStorage !== 'undefined') {
+    var accepted = localStorage.getItem('wow_has_accepted_cookies');
+    if (accepted && accepted === 'yes') {
+      $('#cookie-info').hide();
+    }
+  }
+  $('#cookie-info .close').on('click', function(e) {
+    var me = $(e.target);
+    var infoBox = me.closest('#cookie-info');
+    infoBox.hide();
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('wow_has_accepted_cookies', 'yes');
+    }
   });
 });
