@@ -2671,6 +2671,56 @@ blockquote {
     margin-bottom: 0.55555556em;
   }
 }
+/* ---------- videos ------------------------------------------------ */
+.video,
+.youtube,
+.vimeo {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  background: transparent;
+}
+.video iframe,
+.youtube iframe,
+.vimeo iframe,
+.video object,
+.youtube object,
+.vimeo object,
+.video embed,
+.youtube embed,
+.vimeo embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* ---------- picture frame for images and videos ------------------- */
+.pic {
+  padding-bottom: 13px;
+  background: url('../images/picture_border_bottom.png') repeat-x left bottom transparent;
+  margin-bottom: 1.5625em;
+}
+.pic:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: url('../images/picture_border_bottom.png') repeat-x right bottom transparent;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.pic img,
+.pic .video {
+  border: 2px solid #e6e6e6;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 /* ==================================================================
  * top to bottom styling
  * ================================================================== */
@@ -2883,31 +2933,12 @@ blockquote {
   position: relative;
   background-color: #d0cfcd;
   height: 30px;
-  margin: 0 -6px;
-  overflow: hidden;
 }
 .pgbar-thermometer .t_body .t_level {
   background-color: #ff2600;
   background: url('../images/pgbar_end.png') no-repeat #ff2600 center right;
   height: 30px;
   min-width: 16px;
-}
-.pgbar-thermometer .t_body:before,
-.pgbar-thermometer .t_body:after {
-  content: "";
-  width: 1.4em;
-  height: 30px;
-  position: absolute;
-  top: 0;
-}
-.pgbar-thermometer .t_body:before {
-  left: 0;
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-.pgbar-thermometer .t_body:after {
-  right: 0;
 }
 .pgbar-thermometer .t_body .t_current {
   font-family: "Verdana W01 Bold", Verdana, Arial, sans;
@@ -3054,7 +3085,7 @@ input.eaResetButton,
   display: none;
 }
 .eaSubmitResetButtonGroup {
-  padding-bottom: 1.5625em 0;
+  padding-bottom: 1.5625em;
 }
 /* ---------- text input -------------------------------------------- */
 input[type="text"],
