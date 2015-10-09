@@ -3523,8 +3523,24 @@ label,
   border-bottom: 3px solid #cc1e00;
   margin-top: -1.5625em;
 }
-#eaerrors *:first-child {
+#eaerrors > *:first-child {
   padding-top: 2.34375em;
+}
+#eaerrors h2 {
+  font-size: 1.25em;
+  font-size: 1.25rem;
+  line-height: 1.25em;
+  margin-bottom: 1.25em;
+  font-family: "Verdana W01 Bold", Verdana, Arial, sans;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 0;
+  margin-bottom: 0.625em;
+  color: #ffffff;
+}
+#eaerrors ul,
+#eaerrors li {
+  margin: 0;
 }
 #eaerrors a {
   display: inline-block;
