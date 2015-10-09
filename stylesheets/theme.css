@@ -2508,6 +2508,10 @@ ol,
 li {
   margin-bottom: 1.5625em;
 }
+ul.condensed li,
+ol.condensed li {
+  margin-bottom: 0;
+}
 li {
   list-style-position: inside;
 }
@@ -2913,12 +2917,22 @@ blockquote {
   padding: 0.78125em;
   color: #a7a7a7;
 }
+.onecolumn #footer .menu a {
+  color: #676767;
+}
 #footer .menu a:hover,
 #footer .menu a:focus {
   color: #8e8e8e;
 }
+.onecolumn #footer .menu a:hover,
+.onecolumn #footer .menu a:focus {
+  color: #4e4e4e;
+}
 #footer .menu a:active {
   color: #b4b4b4;
+}
+.onecolumn #footer .menu a:active {
+  color: #747474;
 }
 @media screen and (min-width: 520px) {
   #footer .menu li {
@@ -3014,6 +3028,8 @@ blockquote {
   display: inline;
 }
 .eaLeftColumnFiller,
+.eaRightColumnFiller,
+.eaTwoColumnFiller,
 .eaLabelSpacer,
 br[clear="all"] {
   display: none;
@@ -3098,6 +3114,7 @@ input.eaResetButton,
 }
 .eaSubmitResetButtonGroup {
   padding-bottom: 1.5625em;
+  padding-top: 0.5em;
 }
 /* ---------- text input -------------------------------------------- */
 input[type="text"],
@@ -3136,9 +3153,18 @@ textarea:focus {
   color: #0c0c0c;
   outline: none;
 }
-textarea,
-.eaMessagecontent {
+textarea {
   font-size: 100%;
+  min-height: 10em;
+}
+input.eaMessageSubject {
+  font-size: 100%;
+}
+.eaMessageContent,
+.eaSenderMailTemplate {
+  min-height: 20em;
+  margin-top: 2px;
+  margin-bottom: 0.5em;
 }
 .eaMessageSignoffContainer {
   display: none;
@@ -3236,6 +3262,7 @@ input[type="checkbox"] {
   box-sizing: border-box;
   padding: 5px;
   width: 33%;
+  margin: 0;
 }
 #Donation_AmountField br,
 #Donation_Amount_or_otherField br {
@@ -3253,7 +3280,7 @@ input[type="checkbox"] {
   float: left;
   width: 100%;
   min-width: 5em;
-  margin: 0.78125em 2%;
+  margin: 0.390625em 2%;
 }
 #Donation_AmountField .picker .picker-label,
 #Donation_Amount_or_otherField .picker .picker-label {
@@ -3331,6 +3358,7 @@ input[type="checkbox"] {
 }
 .selecter .selecter-selected {
   background: url('../images/select_arrow.png') no-repeat right center #ffffff;
+  min-height: 2.8em;
 }
 .selecter.open .selecter-selected {
   border-bottom: none;
@@ -3351,6 +3379,11 @@ input[type="checkbox"] {
   line-height: 1.5625em;
   margin-bottom: 1.5625em;
   margin-bottom: 0;
+}
+#Credit_Card_ExpirationField select,
+#Credit_Card_ExpirationField .selecter {
+  width: 45%;
+  display: inline-block;
 }
 /* ---------- label, legend, description --------------------------- */
 label,
@@ -3521,16 +3554,32 @@ label,
 /* ==================================================================
  * contact lists
  * ================================================================== */
+.eaSenderBlock {
+  clear: both;
+  margin-bottom: 0.78125em;
+  margin-top: 0.78125em;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.eaSenderBlock br:first-child {
+  display: none;
+}
+.eaMessageSalutationContainer {
+  margin-top: 0.5em;
+}
 /* ---------- contact ----------------------------------------------- */
 /* select contact instruction text */
 /* container for contacts */
 .eaContactsContainer {
-  float: left;
-  width: 95%;
+  overflow: auto;
+  width: 100%;
   position: relative;
   padding: 10px;
   background-color: #ffffff;
   margin-top: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* contact name container */
 .eaContactNameContainer {
@@ -3542,7 +3591,6 @@ label,
   font-style: normal;
   padding-right: 10px;
   width: 48%;
-  height: 25px;
 }
 /* contact organization container */
 .eaContactOrgContainer {
@@ -3557,7 +3605,6 @@ label,
   font-family: "Verdana W01 Bold", Verdana, Arial, sans;
   font-weight: normal;
   font-style: normal;
-  height: 25px;
   padding-top: 4px;
   width: 125px;
 }

@@ -30,6 +30,16 @@ For videos, add another wrapper around the video link:
 
 This makes your videos responsive, so they will always fit on the screen (even on tiny mobile screens).
 
+### short lists
+
+For lists with very short items you can remove the spacing between them by adding the class `condensed` to the list.
+
+```html
+<ul class="condensed">
+  <li>your list items</li>
+</ul>
+```
+
 ## copy boxes above the form fields
 
 ### progress bar
