@@ -1,0 +1,158 @@
+/* ---------- desktop layout --------------------------------------- */
+
+.en_left_wrapper,
+.en_right_wrapper {
+  float: left;
+  clear: left;
+}
+.twocolumn .en_left_wrapper {
+  float: left;
+  clear: left;
+  width: 51%;
+}
+.twocolumn .en_right_wrapper {
+  float: right;
+  clear: right;
+  width: 45%;
+}
+
+/* ---------- desktop styles --------------------------------------- */
+
+h1 {
+  font-size: 3.75em;
+  font-size: 3.75rem;
+  line-height: 1.25em;
+  margin-bottom: 0.41666667em;
+  line-height: 0.84;
+  margin-top: 0.833334em;
+}
+h2,
+.ea-heading2,
+legend {
+  font-size: 2.8125em;
+  font-size: 2.8125rem;
+  line-height: 1.11111111em;
+  margin-bottom: 0.55555556em;
+  margin-top: 1.111112em;
+}
+blockquote {
+  font-size: 2.8125em;
+  font-size: 2.8125rem;
+  line-height: 1.11111111em;
+  margin-bottom: 0.55555556em;
+}
+#header .inner,
+#cookie-info .inner{
+  padding-left: 5%;
+  padding-right: 6%;
+}
+#header .logo {
+  padding-top: 5px;
+}
+#main {
+  padding-bottom: 4.6875em;
+}
+.eaLeftColumnContent,
+.eaRightColumnContent,
+.eaFullWidthContent,
+.eaSubmitResetButtonGroup {
+  margin-left: 10%;
+  margin-right: 12%;
+}
+#left_wrapper1,
+#right_wrapper1,
+#eaerrors + .eaFullWidthContent {
+  padding-top: 4.6875em;
+}
+#footer {
+  min-height: 3.125em;
+  margin-left: 5%;
+  margin-right: 6%;
+}
+#footer .menu {
+  position: absolute;
+  bottom: 0;
+  width: 51%;
+}
+#footer .menu li {
+  margin-right: 2em;
+}
+
+/* ---------- desktop form styles ----------------------------------- */
+
+.en_right_wrapper {
+  background: none transparent;
+}
+.en_right_wrapper:before {
+  background: url('../images/sidebar.png') #e6e6e6;
+  margin-left: -14px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  max-width: 40em;
+}
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button,
+a.button,
+.button {
+  font-size: 2.625em;
+  font-size: 2.625rem;
+  line-height: 1.19047619em;
+  margin-bottom: 0.5952381em;
+  margin-bottom: 0;
+}
+#Donation_AmountField .picker .picker-label,
+#Donation_Amount_or_otherField .picker .picker-label {
+  font-size: 2.625em;
+  font-size: 2.625rem;
+  line-height: 1.19047619em;
+  margin-bottom: 0.5952381em;
+  margin-bottom: 0;
+}
+#eaerrors {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* ---------- desktop share buttons --------------------------------- */
+
+ul.share-links li a i,
+ul.share-links li a:link i,
+ul.share-links li a:visited i,
+ul.share-links li a em,
+ul.share-links li a:link em,
+ul.share-links li a:visited em,
+ul.share-links li a span.icon,
+ul.share-links li a:link span.icon,
+ul.share-links li a:visited span.icon {
+  width: 70px;
+}
+ul.share-links li a span,
+ul.share-links li a:link span,
+ul.share-links li a:visited span {
+  padding-left: 70px;
+}
+ul.share-links .twitter a i,
+ul.share-links .twitter a em,
+ul.share-links .twitter a span.icon {
+  background-position: 0 -125px;
+}
+ul.share-links .facebook a i,
+ul.share-links .facebook a em,
+ul.share-links .facebook a span.icon {
+  background-position: 5px -28px;
+}
+ul.share-links .email a i,
+ul.share-links .email a em,
+ul.share-links .email a span.icon {
+  background-position: 0 -224px;
+}
