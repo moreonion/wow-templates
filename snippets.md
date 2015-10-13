@@ -112,5 +112,17 @@ If a visitor closes the box, a flag get's set and any further visits won't show 
     <span class="close" title="close">x</span>
   </div></div>
 </div>
-
 ```
+
+## footer links
+
+```html
+<div id="footer" class="eaLeftColumnContent">
+  <ul class="menu">
+    <li><a href="{{link url}}">{{Link text}}</a></li>
+    <li><a href="{{link url}}">{{Link text}}</a></li>
+  </ul>
+</div>
+```
+
+To add some footer menu style links to the bottom of the page, paste this snippet at the beginning of the template footer, between the `start of template footer`-comment and `</div> <!-- main -->`. Replace `{{link url}}` and `{{link text}}` with your link!
