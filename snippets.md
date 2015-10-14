@@ -40,6 +40,20 @@ For lists with very short items you can remove the spacing between them by addin
 </ul>
 ```
 
+### background info
+
+```html
+<a href="#background-info" class="info-toggle">More info</a>
+
+<div id="background-info">
+  <h2>Background info</h2>
+  <p>more more more info</p>
+</div>
+```
+
+The `info-toggle` element enables the "show more info" logic. A click on the toggle shows the element with the id `background-info` and hides the toggle. Since this depends on the id, you can only use it once per page!
+
+
 ## copy boxes above the form fields
 
 ### progress bar

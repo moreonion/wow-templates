@@ -41,6 +41,19 @@ $(window).load(function(){
     }
   });
 
+  // add "show more" link functionality
+  $target = $('#background-info').hide();
+  $toggle = $('.info-toggle').css('display', 'block');
+  $toggle.on('click', function(e) {
+    if ($target.length > 0) {
+      $target.slideDown('fast', function(){
+        $toggle.hide();
+      });
+    }
+    e.preventDefault();
+    return false;
+  });
+
   // move validation icon next to label
   // and the error message below the label
   $('.eaErrorMessage').each(function() {
