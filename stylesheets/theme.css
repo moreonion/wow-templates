@@ -3333,8 +3333,10 @@ input[type="checkbox"] {
 #Donation_Amount_or_otherField .picker .picker-label[for="other_amount"] {
   font-size: 1.125em;
 }
-#Donation_AmountField .picker ~ #Other_AmountInput,
-#Donation_Amount_or_otherField .picker ~ #Other_AmountInput {
+#Donation_AmountField .picker ~ .eaRadioTextfield,
+#Donation_Amount_or_otherField .picker ~ .eaRadioTextfield,
+#Donation_AmountField .picker ~ #OtherInput,
+#Donation_Amount_or_otherField .picker ~ #OtherInput {
   clear: none;
   float: left;
   width: 62%;
