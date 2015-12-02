@@ -2729,10 +2729,6 @@ blockquote {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* ---------- read more toggle -------------------------------------- */
-.info-toggle {
-  display: none;
-}
 /* ==================================================================
  * top to bottom styling
  * ================================================================== */
@@ -3261,15 +3257,6 @@ input[type="checkbox"] {
   overflow: hidden;
   /* other field, add correct input id */
 }
-#Donation_AmountField .eaFormRadio,
-#Donation_Amount_or_otherField .eaFormRadio {
-  display: inline-block;
-  float: left;
-  box-sizing: border-box;
-  padding: 5px;
-  width: 33%;
-  margin: 0;
-}
 #Donation_AmountField br,
 #Donation_Amount_or_otherField br {
   display: none;
@@ -3284,7 +3271,7 @@ input[type="checkbox"] {
 #Donation_AmountField .picker,
 #Donation_Amount_or_otherField .picker {
   float: left;
-  width: 100%;
+  width: 29%;
   min-width: 5em;
   margin: 0.390625em 2%;
 }
@@ -3346,8 +3333,8 @@ input[type="checkbox"] {
 #Donation_Amount_or_otherField .picker .picker-label[for="other_amount"] {
   font-size: 1.125em;
 }
-#Donation_AmountField .picker ~ #other_amountInput,
-#Donation_Amount_or_otherField .picker ~ #other_amountInput {
+#Donation_AmountField .picker ~ #Other_AmountInput,
+#Donation_Amount_or_otherField .picker ~ #Other_AmountInput {
   clear: none;
   float: left;
   width: 62%;
