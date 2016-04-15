@@ -118,4 +118,18 @@ $(window).load(function(){
       localStorage.setItem('wow_has_accepted_cookies', 'yes');
     }
   });
+
+  // undo EN contact list formatting
+  $('.eaContactNameContainer').each(function(){
+    var $checkbox = $(this).children('.eaContactSelectCheckbox');
+    if ($checkbox.length) {
+      // keep checkbox + label, remove node text + &nbsp;s but not links
+      var $link = $(this).children('a')
+      $(this).addClass('has-checkbox').wrapInner('<div class="remove"></div>');
+      if ($link.length){
+        $('label', this).text('').append($link);
+      }
+      $('.remove', this).replaceWith($checkbox);
+    }
+  });
 });
