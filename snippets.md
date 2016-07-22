@@ -140,3 +140,15 @@ If a visitor closes the box, a flag get's set and any further visits won't show 
 ```
 
 To add some footer menu style links to the bottom of the page, paste this snippet at the beginning of the template footer, between the `start of template footer`-comment and `</div> <!-- main -->`. Replace `{{link url}}` and `{{link text}}` with your link!
+
+## show/hide stuff depending on screen size
+
+If you want some elements to show up on a certain screen size only, you may add any of the following classes: "mobile-only", "desktop-only", "hide-on-mobile", "hide-on-desktop".
+
+Let's say you want to add a copy block to desktop size screens that would be too distracting on mobile devices, then you can wrap it in a container to display on desktop only (hide-on-mobile would have the same effect):
+
+```html
+<div class="desktop-only">
+  copy block that's just too much for mobile
+</div>
+```

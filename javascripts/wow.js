@@ -9,7 +9,8 @@ $(window).load(function(){
     // * move submit button to right column
     // * put right column before left column
     if ($('.eaRightColumnContent .eaFormField').length ||
-        $('.eaRightColumnContent .eaMessageContent').length ) {
+        $('.eaRightColumnContent .eaMessageContent').length ||
+        $('.eaRightColumnContent .eaContactsContainer').length) {
       $('.eaSubmitResetButtonGroup').appendTo($('.en_right_wrapper').last());
       $('.en_left_wrapper').each(function(){
         var id = $(this).attr('id').match(/[0-9]+$/);

@@ -2733,6 +2733,19 @@ blockquote {
 .info-toggle {
   display: none;
 }
+/* ---------- utility classes --------------------------------------- */
+@media screen and (max-width: 779px) {
+  .hide-on-mobile,
+  .desktop-only {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 780px) {
+  .hide-on-desktop,
+  .mobile-only {
+    display: none!important;
+  }
+}
 /* ==================================================================
  * top to bottom styling
  * ================================================================== */
